@@ -1,0 +1,158 @@
+/* MAIN STYLE SHEET (comment can be removed) */
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+/* TEMPLATE STYLING */
+
+/* Custom */
+.page-template-template-custom{
+    background-color: rgb(219, 253, 253);
+}
+/* End Custom */
+#logo {
+    width: 50%;
+}
+.logo {
+    width: 15%;
+    height: 15%;
+    background:rgb(215, 215, 215);
+    ;
+}
+
+header nav {
+    position: fixed;
+    top: 6%;
+    left: 0;
+    width: 100%;
+    background: rgb(215, 215, 215);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header nav div#logo {
+    width: 5rem;
+  }
+  header nav ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    list-style: none;
+  }
+  header nav ul li {
+    position: relative;
+    margin-left: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header nav ul li a {
+    display: block;
+    padding: 1rem;
+    color: rgb(0, 0, 0);
+    font-size: 28px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  header nav > ul > li:hover > ul {
+    display: flex;
+  }
+  header nav > ul > li > ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+    background-color: #333;
+  }
+  header nav > ul > li > ul > li > a {
+    white-space: nowrap;
+  }
+/* End navbar css */
+
+.banner {
+  width: 100%;
+}
+
+/* Cards css */
+
+#cards {
+  width: 90%;
+  margin: 1rem auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: row;
+}
+
+#cards-row {
+  width: 90%;
+  margin: 1rem auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card-1 {
+  max-width: 50%;
+  padding: 4px;
+  background: white;
+  border: 2px solid rgb(243, 223, 96);
+ 
+}
+.card-2 {
+  max-width: 60%;
+  padding: 2rem 1rem;
+  border: 2px solid rgb(243, 223, 96);
+  background: white;
+
+}
+
+.card {
+  max-width: 33%;
+  padding: 2rem 1rem;
+  border: 2px solid rgb(243, 223, 96);
+  background: white;
+}
+  /* Footer css */
+  
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 100%;
+  height: 17.1vh;
+  background: #333;
+  color: white;
+}
+#footer1, #footer2, #footer4 {
+  list-style-type: none;
+  font-size: 18px;
+}
+
+#footerline {
+  display: flex;
+  flex-direction: column;
+  width: 10px;
+  height: 60px;
+  background-color: #0BA69E;
+}
+
+#footer5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+}
+
+/* End footer css */
+
+  
