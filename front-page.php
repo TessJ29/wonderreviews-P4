@@ -3,11 +3,10 @@
  * Template Name: Home
  */
 
-$title = get_the_title();
-$content = get_the_content();
+// $title = get_the_title();
+// $content = get_the_content();
 
 render('views/templates/custom.php', compact('title', 'content'));
-
 
 ?>
 
@@ -26,47 +25,17 @@ render('views/templates/custom.php', compact('title', 'content'));
 
 <h1>Laatste reviews</h1>
 
-<!-- Cards met de posts -->
-<div class="container" id="cards">
-  <div class="card-1">
-    <img src="http://www.wonder-reviews.local/wp-content/uploads/2022/05/tikibad-wassenaar.png" alt="">
-  </div>
-  <div class="card-2">
-    <img src="" alt="">
-    <div class="card-title">pretpark</div>
-    <div class="card-content"><?php $content = get_field('inputContent', get_post()->ID); echo $content ?></div>
+<div class="row">
+  <div class="card">
+    <?php
+    $image = get_field('Image', get_post()->ID);
+    $title = get_field('inputTitle', get_post()->ID);
+    $content = get_field('content', get_post()->ID);
+    $score = get_field('score', get_post()->ID);
+    $url = get_field('inputURL', get_post()->ID);
+
+    ?>
+    <img src= <?php echo $image['url']?>>
   </div>
 </div>
 
-<div class="container" id="cards-row">
-  <div class="card">
-    <img src="http://www.wonder-reviews.local/wp-content/uploads/2022/05/efteling.png" alt="">
-    <div class="card-title">De Efteling</div>
-    <div class="card-content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis, a magni molestias illo possimus repellat ea sit aperiam reprehenderit aliquam, cumque consectetur, nostrum ratione totam autem dolorum? Doloremque, labore deleniti.</div>
-  </div>
-
-<div class="card">
-    <img src="http://www.wonder-reviews.local/wp-content/uploads/2022/05/pretparkwalibi.png" alt="">
-    <div class="card-title">Walibi Nederland</div>
-    <div class="card-content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi quidem aliquam officia quos nam, doloremque numquam molestias perspiciatis molestiae. Eum pariatur unde fugiat natus assumenda magnam, placeat temporibus a totam.</div>
-  </div>
-
-  <div class="card">
-    <img src="" alt="">
-    <div class="card-title">afdsafhdakfhdlkahfk</div>
-    <div class="card-content">fdhajfdkafhdjaf</div>
-  </div>
-</div>
-
-<?php
-
-  $title = get_field('inputTitle', get_post()->ID);
-  var_dump($title);
-  // echo $title;
-  $content = get_field('inputContent', get_post()->ID);
-  var_dump($content);
-  $score = get_field('Score', get_post()->ID);
-  var_dump($score);
-  $url = get_field('inputURL', get_post()->ID);
-  var_dump($url);
-?>
