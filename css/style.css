@@ -16,6 +16,16 @@ body * {
     background-color: rgb(219, 253, 253);
 }
 /* End Custom */
+
+main {
+  background-color: rgb(219, 253, 253);
+
+}
+
+img.review {
+  width: 200px;
+  height: 100px;
+}
 #logo {
     width: 50%;
 }
@@ -27,7 +37,7 @@ body * {
 }
 
 header nav {
-    position: fixed;
+    position: relative;
     top: 6%;
     left: 0;
     width: 100%;
@@ -35,6 +45,7 @@ header nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.388);
   }
   header nav div#logo {
     width: 5rem;
@@ -75,52 +86,51 @@ header nav {
   header nav > ul > li > ul > li > a {
     white-space: nowrap;
   }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
 /* End navbar css */
 
 .banner {
   width: 100%;
 }
-
+/* Homepage */
 /* Cards css */
-
-#cards {
-  width: 90%;
-  margin: 1rem auto;
-  padding: 2rem 1rem;
+.row {
   display: flex;
   flex-direction: row;
-}
-
-#cards-row {
   width: 90%;
-  margin: 1rem auto;
-  padding: 2rem 1rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.card-1 {
-  max-width: 50%;
-  padding: 4px;
-  background: white;
-  border: 2px solid rgb(243, 223, 96);
- 
-}
-.card-2 {
-  max-width: 60%;
-  padding: 2rem 1rem;
-  border: 2px solid rgb(243, 223, 96);
-  background: white;
-
+  margin: 0 auto;
 }
 
 .card {
-  max-width: 33%;
+  max-width: 25%;
+  margin: 2rem 1rem;
   padding: 2rem 1rem;
   border: 2px solid rgb(243, 223, 96);
+  border-radius: 10px;
   background: white;
 }
+
+a.lees-meer {
+  background: orange;
+  padding: .2rem;
+}
+
+/* End homepage */
+/* Overzicht */
+/* Overzicht */
+/* Single page */
+
+img.singlepage-img {
+  width: 100vw;
+}
+
+
+/* End single page */
+
   /* Footer css */
   
 footer {

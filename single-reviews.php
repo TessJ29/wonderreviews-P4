@@ -7,6 +7,8 @@
 
 render('views/templates/news-detail.php', compact('title','content', 'newsCategories'));
 
+$arguments = ['post_type' => 'Reviews', 'numberposts' => 5, 'category' => 0, 'orderby' => 'date', 'order' => 'desc'];
+$listOfReviews = get_posts($arguments);
 
 ?>
 
@@ -14,7 +16,6 @@ render('views/templates/news-detail.php', compact('title','content', 'newsCatego
 
 <?php
 
-$post = get_post();
 // $id = $post->ID;
 
   $image = get_field('Image', get_post()->ID);
@@ -22,7 +23,7 @@ $post = get_post();
   $content = get_field('inputContent', get_post()->ID);
   $score = get_field('Score', get_post()->ID);
   $url = get_field('inputURL', get_post()->ID);
-  // var_dump($image);
+  // var_dump($url);
 ?>
 <div class="container" id="singlepage">
     <img src="<?php echo $image['url'] ?>" alt="">
@@ -30,5 +31,5 @@ $post = get_post();
     <h1><?php echo $title ?></h1>
     <p><?php echo $content ?></p>
     <p>Score (<?php echo $score ?>)</p>
-    <p>Url: <?php echo $url ?></p>
+    <p>Link naar website: </p><a href="<?php echo $url ?>"><?php echo $url ?></a>
     </div>
