@@ -26,6 +26,11 @@ img.review {
   width: 200px;
   height: 100px;
 }
+
+img.review-pagina {
+  width: 50%;
+  height: 50%;
+}
 #logo {
     width: 50%;
 }
@@ -126,6 +131,18 @@ a.lees-meer {
 
 img.singlepage-img {
   width: 100vw;
+}
+
+div#singlepage {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border-radius: 15px;
 }
 
 

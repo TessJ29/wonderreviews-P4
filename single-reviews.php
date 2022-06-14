@@ -26,10 +26,9 @@ $listOfReviews = get_posts($arguments);
   // var_dump($url);
 ?>
 <div class="container" id="singlepage">
-    <img src="<?php echo $image['url'] ?>" alt="">
-    </div>
+    <img class="review-pagina" src="<?php echo $image['url'] ?>" alt="">
     <h1><?php echo $title ?></h1>
     <p><?php echo $content ?></p>
     <p>Score (<?php echo $score ?>)</p>
     <p>Link naar website: </p><a href="<?php echo $url ?>"><?php echo $url ?></a>
-    </div>
+</div>
