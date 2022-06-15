@@ -19,6 +19,7 @@ $listOfReviews = get_posts($arguments);
         <img src="http://www.wonder-reviews.local/wp-content/uploads/2022/05/logo_transparent.png" class="logo" alt="">   
             <li><a href="http://www.wonder-reviews.local/">Home</a></li>
             <li><a href="http://www.wonder-reviews.local/overzicht/ ">Overzicht</a></li>
+            <li><a href="http://www.wonder-reviews.local/wp-admin">Inloggen</a></li>
         </ul>
     </nav>
 </header>
@@ -37,17 +38,15 @@ $listOfReviews = get_posts($arguments);
         $content = get_field('inputContent', $id);
         $score = get_field('Score', $id);
         $url = get_field('inputUrl', $id);
-
   ?>
-
-  <div class="card">
-    <div class="col-sm">
-      <img class="review" src="<?php echo $image['url']; ?>">
-        <h3><?php echo $review->post_title; ?></h3>
-        <p>Score: (<?php echo $score ?>) </p>
-        <p><?php echo $url ?></p>
-        <a class="lees-meer" href="<?php echo get_permalink($review); ?>">Lees meer</a>
+    <div class="card">
+      <div class="col-sm">
+        <img class="review" src="<?php echo $image['url']; ?>">
+          <h3><?php echo $review->post_title; ?></h3>
+          <p>Score: (<?php echo $score ?>) </p>
+          <p><?php echo $url ?></p>
+          <a class="lees-meer" href="<?php echo get_permalink($review); ?>">Lees meer</a>
+        </div>
       </div>
-    </div>
   <?php endforeach ?>
   </div>

@@ -27,6 +27,7 @@ $listOfReviews = get_posts($arguments);
         <img src="http://www.wonder-reviews.local/wp-content/uploads/2022/05/logo_transparent.png" class="logo" alt="">   
             <li><a href="http://www.wonder-reviews.local/">Home</a></li>
             <li><a href="http://www.wonder-reviews.local/overzicht/ ">Overzicht</a></li>
+            <li><a href="http://www.wonder-reviews.local/wp-admin">Inloggen</a></li>
         </ul>
     </nav>
 </header>
